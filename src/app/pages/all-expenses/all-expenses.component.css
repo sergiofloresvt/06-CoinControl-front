@@ -1,0 +1,77 @@
+
+.card-container{
+ display: flex;
+ flex-direction: column;
+}
+.card {
+  width: 80%;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #cbd0d6;
+  color: #EEE;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    background-color: #3A4750;
+  }
+  
+  .card-title {
+    text-align: center;
+  }
+  
+  .card-title button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .card-details {
+    padding: 10px;
+    border-top: 1px solid #3A4750;
+    display: none;
+    background-color: #EEE;
+    color: #303841;
+    font-family: 'Exo 2', sans-serif;
+  }
+  
+  .card.expanded .card-details {
+    display: block;
+  }
+  
+  .expense-details {
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .expense-item, .expense-price, .expense-date {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .left {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .card-subtitle {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 15px;
+  }
+  

@@ -1,0 +1,40 @@
+<div class="card-container">
+  <div class="">
+    <div class="" *ngFor="let category of categories">
+      <div class="card" [ngClass]="{ 'expanded': expandedCategories[category.id] }">
+        <div class="card-body">
+          <h4 class="card-title">
+            <button (click)="toggleCategory(category.id)">{{ category.name }}</button>
+          </h4>
+          <div class="card-details" *ngIf="expandedCategories[category.id]">
+            <div *ngFor="let expense of categoryExpensesMap[category.id]" class="expense-details">
+              <div class="expense-item">
+                <div class="left">
+                  <!-- Contenido izquierdo -->
+                </div>
+                <div class="right">
+                  <h6 class="card-subtitle">{{ expense.description }}</h6>
+                </div>
+              </div>
+              <div class="expense-price">
+                <div class="left">
+                  <p>Precio: </p>
+                </div>
+                <div class="right">
+                  <p class="card-text">${{ expense.amount }}</p>
+                </div>
+              </div>
+              <div class="expense-date">
+                <p class="card-text">{{ expense.date }}</p>
+              </div>
+              <div class="expense-actions">
+                <!-- Agrega el botón de eliminar aquí -->
+                <button (click)="deleteExpense(expense.id)">Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

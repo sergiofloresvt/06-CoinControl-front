@@ -1,0 +1,14 @@
+body {
+    background-color: black; /* Fondo negro para toda la página */
+  }
+  
+  .container {
+    height: 100vh;
+  }
+  
+  .form-group label {
+    color: white; /* Texto de las etiquetas en blanco */
+  }
+  #bottom{
+    margin-top: 5%;
+  }
