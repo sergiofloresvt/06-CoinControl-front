@@ -1,0 +1,48 @@
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000;
+  }
+  
+  /* Estilos para el formulario de registro */
+  .registration-form {
+    max-width: 400px;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .registration-form h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .registration-form .form-group label {
+    color: #fff;
+  }
+  
+  .registration-form .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para el botón de registro */
+  .registration-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* Estilos adicionales (si es necesario) */
+  

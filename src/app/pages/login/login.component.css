@@ -1,14 +1,53 @@
-body {
-    background-color: black; /* Fondo negro para toda la página */
-  }
-  
-  .container {
-    height: 100vh;
-  }
-  
-  .form-group label {
-    color: white; /* Texto de las etiquetas en blanco */
-  }
-  #bottom{
-    margin-top: 5%;
-  }
+/* Estilos para el contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.login-form {
+  max-width: 400px;
+  width: 100%;
+  background-color: #000;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.login-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-form .form-group label {
+  color: #fff;
+}
+
+.login-form .form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Estilos para el botón de inicio de sesión */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Estilos para el enlace de registro */
+.register-link {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.registration-link {
+  color: #007bff;
+}
