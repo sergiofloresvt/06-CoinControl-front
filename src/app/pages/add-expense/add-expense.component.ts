@@ -11,6 +11,8 @@ import { ExpenseService } from 'src/app/service/expense.service';
   styleUrls: ['./add-expense.component.css']
 })
 export class AddExpenseComponent implements OnInit {
+
+  
   expense: Expense = {
     id: 0,
     amount: 0,
@@ -78,4 +80,9 @@ export class AddExpenseComponent implements OnInit {
       this.selectedCategoryId = 0; // Reinicia la selección de categoría
     });
   }
+
+selectCategory(category: any) {
+  // Tu lógica para seleccionar la categoría aquí
+  this.selectedCategoryId = category.id;
+}
 }

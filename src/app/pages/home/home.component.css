@@ -1,0 +1,28 @@
+.header {
+    background-color: #333; /* Cambia el color de fondo según tus preferencias */
+    color: #fff; /* Cambia el color del texto según tus preferencias */
+    text-align: center;
+    padding: 20px 0; /* Ajusta el espaciado superior e inferior según tus preferencias */
+  }
+  
+  .nav {
+    list-style: none; /* Elimina los puntos de lista */
+    display: flex; /* Utiliza flexbox para alinear los elementos en una fila */
+    justify-content: center; /* Distribuye los elementos con espacio entre ellos */
+    padding: 0; /* Elimina el relleno de la lista */
+  }
+  .nav-item {
+    margin-right: 20px; /* Ajusta el espacio entre los elementos si lo deseas */
+  
+  }
+
+  .nav-link {
+    text-decoration: none; /* Quita el subrayado de los enlaces si lo deseas */
+    color: #fff; /* Cambia el color del texto de las etiquetas */
+    font-weight: bold; /* Cambia el estilo de fuente si lo deseas */
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline; /* Añade subrayado al pasar el ratón sobre las etiquetas si lo deseas */
+  }
+  

@@ -12,7 +12,8 @@ const routes: Routes = [
  {path:'add-expense', component: AddExpenseComponent},
  {path:'login', component: LoginComponent},
  {path: 'home', component: HomeComponent},
- {path: 'sing-up', component: SingUpComponent}
+ {path: 'sing-up', component: SingUpComponent},
+
 ];
 
 @NgModule({

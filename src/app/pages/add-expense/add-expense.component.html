@@ -1,9 +1,10 @@
 <div class="container">
   <h2>Agregar Gasto</h2>
   <form (submit)="submitForm()">
-    <div class="form-group">
-      <label for="monto">Monto:</label>
-      <input type="number" id="monto" [(ngModel)]="expense.amount" name="monto" class="form-control" required>
+    <div class="form-group text-center">
+      <label for="monto" class="sr-only">Monto:</label>
+      <input type="number" id="monto" [(ngModel)]="expense.amount" name="monto" class="form-control border-none text-center" required>
+      <div class="input-underline"></div>
     </div>
     <div class="form-group">
       <label for="description">Descripción:</label>
@@ -14,14 +15,22 @@
       <label for="date">Fecha:</label>
       <input type="date" id="date" [(ngModel)]="expense.date" name="date" class="form-control" required>
     </div>
+    <!---->
     <div class="form-group">
       <label for="category">Categoría:</label>
-      <select id="category" [(ngModel)]="selectedCategoryId" name="category" class="form-control" required>
-        <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
-      </select>
+      <div class="category-list">
+        <div *ngFor="let category of categories" (click)="selectCategory(category)" class="category" [class.selected]="category.id === selectedCategoryId">
+          <div class="category-circle">
+            <i class="material-icons">shopping_cart</i> <!-- Icono de Material Icons -->
+          </div>
+          <span>{{ category.name }}</span>
+        </div>
+      </div>
     </div>
+    <!---->    
     <br>
     <button type="submit" class="btn btn-primary">Agregar Gasto</button>
+  
   </form>
   <br>
   <a routerLink="/all-expenses">Allexpenses</a>
@@ -29,4 +38,10 @@
 
 
 
+<!-- <div class="form-group">
+  <label for="category">Categoría:</label>
+  <select id="category" [(ngModel)]="selectedCategoryId" name="category" class="form-control" required>
+    <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+  </select>
+</div> -->
 

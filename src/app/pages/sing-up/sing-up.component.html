@@ -25,5 +25,17 @@
     </form>
   </div>
   
+  <div >
+    <div *ngIf="showModal">
+      <div class="modal-overlay">
+        <div class="modal-container">
+          <h2>Registro Exitoso</h2>
+          <p>Se ha registrado exitosamente.</p>
+          <button (click)="GoLogin()">Ir a Iniciar Sesión</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 

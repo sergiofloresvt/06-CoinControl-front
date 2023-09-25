@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -12,7 +12,8 @@ import { UserService } from 'src/app/service/user.service';
 export class SingUpComponent {
 
   singUp: FormGroup
-  
+  /*Ventana modal desactivada */
+  showModal = false;
 
   constructor(
     private router: Router, 
@@ -33,22 +34,34 @@ export class SingUpComponent {
 
         const user = this.singUp.value
         this.userService.singUpUser(user).subscribe(
-          (response)=>{
+          ()=>{
             // Manejo de respuestas del servidor (Exito)
+            
             console.log('El registro se realizó con éxito Redirigiendo al inicio de sesión.')
-            this.singUp.reset()
-          
+      
+            // Limpia el formulario después del registro exitoso
+             this.singUp.reset()
+            //Abrimos la ventana modal
+           this.showModal = true
+            
           },
-          (error)=>{
+          ()=>{
             // manejo de errores del servidor (error)
             console.log('Los datos ingresados son invalidos para el registro')
           }
-           // Limpia el formulario después del registro exitoso
+          
           
         )
       }
+      return false
     } 
+    
+ 
+
+  GoLogin(){
    
+    this.router.navigate(['/login'])
+  }
   }
 
 

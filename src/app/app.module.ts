@@ -18,7 +18,6 @@ import { SingUpComponent } from './pages/sing-up/sing-up.component';
 import { UserService } from './service/user.service';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +28,8 @@ import { UserService } from './service/user.service';
     AllExpensesComponent,
     LoginComponent,
     HomeComponent,
-    SingUpComponent
+    SingUpComponent,
+    
 
 
   ],
