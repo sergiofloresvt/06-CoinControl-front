@@ -1,74 +1,104 @@
 /* Estilo para el campo de entrada */
 .form-control.border-none {
-    border: none;
-    outline: none; /* Quita el borde de enfoque */
-    background: transparent; /* Fondo transparente */
-    width: 100%;
-    font-size: 16px; /* Tamaño de fuente personalizable */
+  border: none;
+  outline: none; /* Quita el borde de enfoque */
+  background: transparent; /* Fondo transparente */
+  width: 100%;
+  font-size: 16px; /* Tamaño de fuente personalizable */
+}
+
+/* Estilo para la línea debajo del campo de entrada */
+.input-underline {
+  border-bottom: 2px solid #000; /* Cambia el grosor y el color de la línea */
+  width: 100%;
+  margin-top: 5px; /* Espacio entre el campo y la línea */
+}
+
+/* Estilo para el cursor tipo palo (I-beam) que titila */
+.form-control:focus + .input-underline::before {
+  content: '';
+  width: 1px; /* Ancho del cursor */
+  background-color: #000; /* Color del cursor */
+  position: absolute;
+  bottom: 0;
+  animation: cursor-blink 0.7s infinite; /* Animación para el parpadeo */
+}
+
+/* Animación para el parpadeo del cursor */
+@keyframes cursor-blink {
+  0% {
+    opacity: 1;
   }
-  
-  /* Estilo para la línea debajo del campo de entrada */
-  .input-underline {
-    border-bottom: 2px solid #000; /* Cambia el grosor y el color de la línea */
-    width: 100%;
-    margin-top: 5px; /* Espacio entre el campo y la línea */
+  50% {
+    opacity: 0;
   }
-  
-  /* Estilo para el cursor tipo palo (I-beam) que titila */
-  .form-control:focus + .input-underline::before {
-    content: '';
-    width: 1px; /* Ancho del cursor */
-    background-color: #000; /* Color del cursor */
-    position: absolute;
-    bottom: 0;
-    animation: cursor-blink 0.7s infinite; /* Animación para el parpadeo */
+  100% {
+    opacity: 1;
   }
-  
-  /* Animación para el parpadeo del cursor */
-  @keyframes cursor-blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /*Agregar categoria*/
-  .category-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Espacio entre los círculos */
-  }
-  
-  .category {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .category-circle {
-    width: 20px; /* Tamaño del círculo */
-    height: 20px; /* Tamaño del círculo */
-    border-radius: 50%; /* Hace que sea un círculo */
-    background-color: #333; /* Color del círculo */
-    margin-right: 5px; /* Espacio entre el círculo y el texto */
-  }
-  
-  .category span {
-    font-size: 16px; /* Tamaño de fuente del texto */
-  }
-  
-  /* Estilo para el círculo seleccionado */
-  .category.selected .category-circle {
-    background-color: #007bff; /* Cambia el color cuando se selecciona */
-  }
-  /* Estilo para la categoría seleccionada */
+}
+
+/*Agregar categoria*/
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espacio entre los círculos */
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.category-circle {
+  width: 20px; /* Tamaño del círculo */
+  height: 20px; /* Tamaño del círculo */
+  border-radius: 50%; /* Hace que sea un círculo */
+   /* Color del círculo */
+  margin-right: 5px; /* Espacio entre el círculo y el texto */
+}
+
+.category span {
+  font-size: 16px; /* Tamaño de fuente del texto */
+}
+
+/* Estilo para el círculo seleccionado */
+.category.selected .category-circle {
+  background-color: #007bff; /* Cambia el color cuando se selecciona */
+}
+/* Estilo para la categoría seleccionada */
 .category.selected {
-    border: 2px solid #007bff; /* Agrega un borde cuando está seleccionada */
-    background-color: #f0f0f0; /* Cambia el fondo cuando está seleccionada */
-  }
-  
+  border: 2px solid #007bff; /* Agrega un borde cuando está seleccionada */
+  background-color: #f0f0f0; /* Cambia el fondo cuando está seleccionada */
+}
+/* Estilo para el contenedor del formulario */
+.fondos {
+margin-bottom: 20px; /* Espacio entre elementos */
+}
+
+/* Estilo para la etiqueta del formulario */
+label {
+font-weight: bold; /* Texto en negrita */
+display: block; /* Hacer que la etiqueta ocupe una línea completa */
+margin-bottom: 5px; /* Espacio inferior entre la etiqueta y el select */
+}
+
+/* Estilo para el select */
+select {
+width: 100%; /* El select ocupa todo el ancho del contenedor */
+padding: 10px; /* Espaciado interno */
+border: 1px solid #ccc; /* Borde del select */
+border-radius: 4px; /* Esquinas redondeadas */
+outline: none; /* Quita el borde resaltado en algunos navegadores */
+}
+
+/* Estilo para las opciones del select */
+option {
+padding: 5px; /* Espaciado interno de las opciones */
+}
+
+/* Estilo para el select cuando está enfocado (activo) */
+select:focus {
+border-color: #007bff; /* Cambia el color del borde al enfocar el select */
+box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
+}

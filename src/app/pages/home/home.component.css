@@ -25,4 +25,10 @@
   .nav-link:hover {
     text-decoration: underline; /* Añade subrayado al pasar el ratón sobre las etiquetas si lo deseas */
   }
-  
+.icon{
+  color: rgb(255, 0, 0);
+}
+
+
+
+

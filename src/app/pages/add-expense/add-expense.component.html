@@ -19,15 +19,25 @@
     <div class="form-group">
       <label for="category">Categoría:</label>
       <div class="category-list">
-        <div *ngFor="let category of categories" (click)="selectCategory(category)" class="category" [class.selected]="category.id === selectedCategoryId">
+        <div *ngFor="let category of categories" (click)="selectCategory(category)" 
+        class="category" [class.selected]="category.id === selectedCategoryId">
           <div class="category-circle">
-            <i class="material-icons">shopping_cart</i> <!-- Icono de Material Icons -->
+           <mat-icon [style.color]="category.color">{{category.icons}}</mat-icon> 
           </div>
           <span>{{ category.name }}</span>
         </div>
       </div>
     </div>
-    <!---->    
+    <!----> 
+    <div class="form-group">
+      <label for="funds">Seleccionar Fondo:</label>
+      <select [(ngModel)]="selectedFundsId" name="fundsId" class="form-control" (change)="onFundsChange()">
+        <option *ngFor="let fund of fundsList" [value]="fund.id">
+          {{ fund.predefinedFund.name }}
+        </option>
+      </select>
+    </div>
+    
     <br>
     <button type="submit" class="btn btn-primary">Agregar Gasto</button>
   
@@ -37,11 +47,10 @@
 </div>
 
 
-
+<!--<i class="material-icons">shopping_cart</i>  Icono de Material Icons -->
 <!-- <div class="form-group">
   <label for="category">Categoría:</label>
   <select id="category" [(ngModel)]="selectedCategoryId" name="category" class="form-control" required>
     <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
   </select>
 </div> -->
-

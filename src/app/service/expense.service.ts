@@ -16,9 +16,10 @@ export class ExpenseService {
 
 
   //Agregar un gasto
-  addExpense(expense: Expense, categoryId: number): Observable<Expense> {
+  addExpense(expense: Expense, categoryId: number, fundsId: number): Observable<Expense> {
     expense.category.id = categoryId;
-    return this.http.post<Expense>(`${this.baseUrl}/expense/add`, expense);
+    // Agrega fundsId como un parámetro en la URL
+    return this.http.post<Expense>(`${this.baseUrl}/expense/add?fundsId=${fundsId}`, expense);
   }
 
   // Método para obtener los gastos de un usuario y una categoría específicos

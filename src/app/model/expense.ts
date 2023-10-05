@@ -1,4 +1,5 @@
 import { Category } from "./category";
+import { Funds } from "./funds";
 import { User } from "./user";
 
 export interface Expense {
@@ -8,4 +9,5 @@ export interface Expense {
     date: string;
     category: Category;
     user: User
+    funds: Funds;
 }
