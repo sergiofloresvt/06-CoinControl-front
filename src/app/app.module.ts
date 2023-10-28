@@ -16,7 +16,12 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SingUpComponent } from './pages/sing-up/sing-up.component';
 import { UserService } from './service/user.service';
-import {MatIconModule} from '@angular/material/icon';
+import { AddFundComponent } from './pages/add-fund/add-fund.component';
+import { AllFundsComponent } from './pages/all-funds/all-funds.component';
+import { GraphicComponent } from './pages/graphic/graphic.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -29,8 +34,9 @@ import {MatIconModule} from '@angular/material/icon';
     LoginComponent,
     HomeComponent,
     SingUpComponent,
-    
-    
+    AddFundComponent,
+    AllFundsComponent,
+    GraphicComponent
 
 
   ],
@@ -39,9 +45,7 @@ import {MatIconModule} from '@angular/material/icon';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    MatIconModule
-    
+    ReactiveFormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

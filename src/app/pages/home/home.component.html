@@ -1,26 +1,42 @@
-<div class="header">
+<!-- <div class="header">
     <ul class="nav">
       <li class="nav-item">
         <a class="nav-link active" routerLink="/add-expense">Gastos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" routerLink="/home">Ingresos</a>
+        <a class="nav-link active" routerLink="/home">Fondos</a>
       </li>
     </ul>
   </div>
   <div>
+<div>
+    <app-all-funds></app-all-funds>
+</div>
+<div class="main-graphic">
+    <app-graphic></app-graphic>
+</div>
+<div>
     <app-all-expenses></app-all-expenses>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
+</div> -->
+<div class="header">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" routerLink="/add-expense">Gastos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" routerLink="/home">Fondos</a>
+        </li>
+    </ul>
+</div>
+<div class="content-container">
+    <div class="section">
+        <app-all-funds></app-all-funds>
+    </div>
+    <div class="section main-graphic">
+        <app-graphic></app-graphic>
+    </div>
+    <div class="section">
+        <app-all-expenses></app-all-expenses>
+    </div>
+</div>
 

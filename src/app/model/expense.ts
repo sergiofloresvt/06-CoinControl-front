@@ -8,6 +8,6 @@ export interface Expense {
     description: string;
     date: string;
     category: Category;
-    user: User
+    user: User;
     funds: Funds;
 }

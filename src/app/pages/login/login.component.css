@@ -1,12 +1,15 @@
-/* Estilos para el contenedor principal */
+body {
+  background-color: #031f33;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #333;
-  color: #fff;
+  background-color: #031f33;
+  color: #ffffff;
   font-family: Arial, sans-serif;
 }
 
@@ -14,7 +17,7 @@
 .login-form {
   max-width: 400px;
   width: 100%;
-  background-color: #000;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
 }
@@ -22,10 +25,11 @@
 .login-form h2 {
   font-size: 24px;
   margin-bottom: 20px;
+  
 }
 
 .login-form .form-group label {
-  color: #fff;
+  color: #000000;
 }
 
 .login-form .form-control {
@@ -49,5 +53,25 @@
 }
 
 .registration-link {
-  color: #007bff;
+  color: #86ff2e;
+}
+
+/* Cambiar el color de fondo del botón */
+.btn-primary {
+  background-color: #86ff2e;
+  border-color: #000000; /* Cambia el color del borde*/
+}
+
+/* Cambiar el color del texto del botón */
+.btn-primary {
+  color: #000000;
+}
+
+h2{
+  color: #000000;
+  text-align: center;
+}
+
+.login-form .form-group.password-label {
+  margin-bottom: 10px;
 }

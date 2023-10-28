@@ -10,13 +10,13 @@
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  background-color: #cbd0d6;
+  background-color: #ffffff;
   color: #EEE;
   }
   
   .card:hover {
     transform: translateY(-5px);
-    background-color: #3A4750;
+    background-color: #86ff2e;
   }
   
   .card-title {
@@ -32,12 +32,9 @@
   }
   
   .card-details {
-    padding: 10px;
-    border-top: 1px solid #3A4750;
-    display: none;
-    background-color: #EEE;
-    color: #303841;
-    font-family: 'Exo 2', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: sans-serif;
   }
   
   .card.expanded .card-details {
@@ -46,7 +43,6 @@
   
   .expense-details {
     display: flex;
-    
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
@@ -57,7 +53,7 @@
   
   .expense-item, .expense-price, .expense-date {
     display: flex;
-    justify-content: space-between;
+
   }
   
   .left {
@@ -71,7 +67,26 @@
   }
   
   .card-subtitle {
-    font-family: 'Exo 2', sans-serif;
+    font-family: sans-serif;
     font-size: 15px;
   }
   
+/* Agregar estilos al botón "Eliminar" */
+.delete-button {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #ff3333;
+}
+/*Graficos*/
+.conteiner{
+  width: 1000px; /* Ancho deseado */
+  height: 500px; /* Altura deseada */
+}

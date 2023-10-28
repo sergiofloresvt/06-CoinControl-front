@@ -1,0 +1,47 @@
+/* Estilo para el botón de la barra de navegación */
+.navbar-toggler-icon {
+    background-color: #ffffff; /* Color del icono del botón */
+}
+
+/* Estilo para los elementos de la barra de navegación */
+.navbar-nav .nav-link {
+    color: #333; /* Color del texto de los elementos de navegación */
+    margin-right: 10px; /* Espacio entre elementos de navegación */
+}
+
+/* Estilo para el enlace activo */
+.navbar-nav .nav-link.active {
+    font-weight: bold; /* Estilo para el enlace activo (ejemplo) */
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-menu {
+    background-color: #fff; /* Color de fondo del menú desplegable */
+}
+
+/* Estilo para los elementos del menú desplegable */
+.dropdown-item {
+    color: #333; /* Color del texto de los elementos del menú */
+}
+
+/* Estilo para el botón del menú desplegable */
+.btn-secondary.dropdown-toggle {
+    background-color: #031f33; /* Color de fondo del botón del menú desplegable */
+    border-color: #333; /* Color del borde del botón del menú desplegable */
+}
+
+/* Cambia el color del texto del botón del menú desplegable al hacer hover */
+.btn-secondary.dropdown-toggle:hover {
+    background-color: #555; /* Color de fondo en el hover */
+    border-color: #555; /* Color del borde en el hover */
+}
+
+/* Cambia el color de fondo de la barra de navegación */
+.navbar {
+    background-color: #ffffff;
+}
+
+/* Cambia el color de fondo al hacer clic en un elemento de navegación */
+.nav-item:active {
+    background-color: #ffffff; /* Color de fondo al hacer clic */
+}

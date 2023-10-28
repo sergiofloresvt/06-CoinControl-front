@@ -1,41 +1,31 @@
-<div class="container">
+<body>
+
+  <div class="container">
     <form [formGroup]="singUp" (ngSubmit)="onSubmit()" class="registration-form">
       <h2>Registrarse</h2>
       <div class="form-group">
         <label for="username">Nombre de usuario:</label>
         <input type="text" id="username" class="form-control" formControlName="username" />
       </div>
-    
+
       <div class="form-group">
         <label for="password">Contraseña:</label>
         <input type="password" id="password" class="form-control" formControlName="password" />
       </div>
-    
+
       <div class="form-group">
         <label for="name">Nombre completo:</label>
         <input type="text" id="name" class="form-control" formControlName="name" />
       </div>
-    
+
       <div class="form-group">
         <label for="email">Correo electrónico:</label>
         <input type="email" id="email" class="form-control" formControlName="email" />
       </div>
-    
+
       <button type="submit" class="btn btn-primary">Registrarse</button>
     </form>
   </div>
-  
-  <div >
-    <div *ngIf="showModal">
-      <div class="modal-overlay">
-        <div class="modal-container">
-          <h2>Registro Exitoso</h2>
-          <p>Se ha registrado exitosamente.</p>
-          <button (click)="GoLogin()">Ir a Iniciar Sesión</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
-
+</body>

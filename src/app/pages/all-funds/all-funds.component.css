@@ -1,0 +1,15 @@
+.center-div {
+    text-align: center; /* Centra el contenido horizontalmente */
+    display: flex;
+    flex-direction: column;
+    color: rgb(35, 34, 33);
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Estilo característico para los números */
+ul li {
+    font-size: 24px; /* Tamaño de fuente grande */
+    color: #ff5733; /* Cambia el color de los números */
+    font-weight: bold; /* Texto en negrita */
+    margin:  0; /* Ajusta el espaciado entre los números */
+}

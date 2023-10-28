@@ -1,3 +1,12 @@
-header {
-    background: url(https://cdn.pixabay.com/photo/2020/05/07/04/01/digitization-5140071_1280.jpg)
+/* Estilo para la imagen del encabezado */
+header .container img {
+    max-width: 40%; /* La imagen se ajustará al ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción original */
+    margin: 0 auto; /* Centrar la imagen horizontalmente dentro del contenedor */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+}
+
+header{
+    background-color: #031f33;
+   
 }

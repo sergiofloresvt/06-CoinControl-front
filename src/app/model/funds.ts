@@ -1,4 +1,4 @@
-import { PredefinedFund } from "./predefined-funds";
+import { PredefinedFund } from "./predefined-fund";
 import { User } from "./user";
 
 export interface Funds {

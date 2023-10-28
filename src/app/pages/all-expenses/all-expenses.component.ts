@@ -3,6 +3,7 @@ import { Category } from 'src/app/model/category';
 import { Expense } from 'src/app/model/expense';
 import { ExpenseService } from 'src/app/service/expense.service';
 import { AuthService } from 'src/app/service/auth.service';
+import { Chart, ChartType } from 'chart.js/auto';
 
 @Component({
   selector: 'app-all-expenses',
@@ -14,13 +15,13 @@ export class AllExpensesComponent {
   categoryExpensesMap: { [key: number]: Expense[] } = {};
   expandedCategories: { [key: number]: boolean } = {};
   categories: Category[] = [];
-
+  chartPie?:Chart
   constructor(private expenseService: ExpenseService,
     private authService: AuthService
   ) { }
 
   ngOnInit(): void {
-
+    
     this.loadCategories();
   }
 
@@ -33,6 +34,7 @@ export class AllExpensesComponent {
       this.categories.forEach((category) => {
         this.loadExpensesByCategory(category.id);
       });
+     
     });
   }
 
@@ -64,4 +66,9 @@ export class AllExpensesComponent {
     this.expandedCategories[categoryId] = !this.expandedCategories[categoryId];
 
   }
+
+
+
+  
+
 }

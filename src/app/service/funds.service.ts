@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Funds } from '../model/funds';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +19,5 @@ export class FundsService {
   getFundsByUserId(userId: number): Observable<Funds[]>{
     return this.http.get<Funds[]>(`${this.baseUrl}/funds/find/user/${userId}`)
   }
+
 }

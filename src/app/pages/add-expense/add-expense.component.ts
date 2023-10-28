@@ -14,7 +14,7 @@ import { FundsService } from 'src/app/service/funds.service';
 })
 export class AddExpenseComponent implements OnInit {
 
-   //Expense inicialización
+  //Expense inicialización
   expense: Expense = {
     id: 0,
     amount: 0,
@@ -22,9 +22,7 @@ export class AddExpenseComponent implements OnInit {
     date: '',
     category: {
       id: 0,
-      name: '',
-      icons: '',
-      color: ''
+      name: ''
     },
     user: {
       id: 0,
@@ -49,14 +47,19 @@ export class AddExpenseComponent implements OnInit {
       }
 
     }
-
   };
 
-  categories: Category[] = [];
-  selectedCategoryId: number = 0;
+
+
+
+  categories: Category[] = []; //Lista de categorias
+  selectedCategoryId: number = 0; // Categoria seleccionada
+
 
   fundsList: Funds[] = []; // Lista de fondos
   selectedFundsId: number | undefined; // Fondo seleccionado
+
+
   constructor(
     private expenseService: ExpenseService,
     private authService: AuthService,
@@ -64,6 +67,8 @@ export class AddExpenseComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
+
     // Llamar al servicio para obtener la lista de categorías
     this.expenseService.getCategorys().subscribe(categories => {
       this.categories = categories;
@@ -74,8 +79,9 @@ export class AddExpenseComponent implements OnInit {
     if (userId) {
       this.expense.user.id = userId;
 
-       // Llamar al servicio de fondos para obtener los fondos del usuario
-       this.fundsService.getFundsByUserId(userId).subscribe(
+
+      // Llamar al servicio de fondos para obtener los fondos del usuario
+      this.fundsService.getFundsByUserId(userId).subscribe(
         (funds: Funds[]) => {
           // Manejar los fondos obtenidos aquí
           console.log('Fondos del usuario:', funds);
@@ -87,27 +93,25 @@ export class AddExpenseComponent implements OnInit {
       );
     }
   }
-    //Metodo para verificiar si el id de funds cambia, para manejar errrores
-    onFundsChange() {
-      console.log('Fondo seleccionado:', this.selectedFundsId);
-    }
-  
 
-  
+  //Metodo para verificiar si el id de funds cambia, para manejar errrores
+  onFundsChange() {
+    console.log('Fondo seleccionado:', this.selectedFundsId);
+  }
+
+
 
   submitForm() {
-    const categoryId = this.selectedCategoryId; 
-    // Se Obtiene el categoryId de la lista desplegable
-    const fundsId = Number(this.selectedFundsId); 
-     // Se obtiene el fundsId de la lista desplegable
+    const categoryId = this.selectedCategoryId; // Se obtiene el categoryId de la lista desplegable
+    const fundsId = Number(this.selectedFundsId);  // Se obtiene el fundsId de la lista desplegable
 
-      // Asigna el valor de fundsId
+    // Asigna el valor de fundsId
     this.expense.funds.id = fundsId;
 
-    //Imprime los datos que se enviarian por la consola del browser
+    // Imprime los datos que se enviarían por la consola del navegador
     console.log('Datos a enviar:', this.expense);
 
-    this.expenseService.addExpense(this.expense, categoryId, fundsId ).subscribe(() => {
+    this.expenseService.addExpense(this.expense, categoryId, fundsId).subscribe(() => {
       // Limpia el formulario después de agregar el gasto
       this.expense = {
         id: 0,
@@ -116,12 +120,10 @@ export class AddExpenseComponent implements OnInit {
         date: '',
         category: {
           id: 0,
-          name: '',
-          icons: '',
-          color: ''
+          name: ''
         },
         user: {
-          id: this.expense.user.id, // Mantén el user_id después de la inserción
+          id: this.expense.user.id, // Mantiene el user_id después de la inserción
           username: '',
           password: '',
           name: '',
@@ -148,8 +150,4 @@ export class AddExpenseComponent implements OnInit {
     });
   }
 
-selectCategory(category: any) {
-  // Tu lógica para seleccionar la categoría aquí
-  this.selectedCategoryId = category.id;
-}
 }

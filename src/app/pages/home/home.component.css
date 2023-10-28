@@ -1,34 +1,52 @@
 .header {
-    background-color: #333; /* Cambia el color de fondo según tus preferencias */
+    background-color: rgba(51, 51, 51, 0.8); /* Cambia el último valor (0.8) para ajustar la opacidad */
     color: #fff; /* Cambia el color del texto según tus preferencias */
     text-align: center;
     padding: 20px 0; /* Ajusta el espaciado superior e inferior según tus preferencias */
-  }
-  
-  .nav {
+}
+
+.nav {
     list-style: none; /* Elimina los puntos de lista */
     display: flex; /* Utiliza flexbox para alinear los elementos en una fila */
     justify-content: center; /* Distribuye los elementos con espacio entre ellos */
     padding: 0; /* Elimina el relleno de la lista */
-  }
-  .nav-item {
-    margin-right: 20px; /* Ajusta el espacio entre los elementos si lo deseas */
-  
-  }
+}
 
-  .nav-link {
+.nav-item {
+    margin-right: 20px; /* Ajusta el espacio entre los elementos si lo deseas */
+}
+
+.nav-link {
     text-decoration: none; /* Quita el subrayado de los enlaces si lo deseas */
     color: #fff; /* Cambia el color del texto de las etiquetas */
     font-weight: bold; /* Cambia el estilo de fuente si lo deseas */
-  }
-  
-  .nav-link:hover {
-    text-decoration: underline; /* Añade subrayado al pasar el ratón sobre las etiquetas si lo deseas */
-  }
-.icon{
-  color: rgb(255, 0, 0);
+    border-radius: 3px;
+    background-color: rgba(228, 217, 217, 0.8); /* Cambia el último valor (0.8) para ajustar la opacidad */
+    text-decoration: none;
+    color: #100f0f;
+    font-weight: bold;
+    border: 3px solid transparent; /* Añade un borde transparente en estado normal */
+    padding: 5px 10px; /* Ajusta el espaciado si es necesario */
 }
 
+.nav-link:hover {
+    border: 3px solid #86ff2e; /* Cambia el grosor y el color del borde en estado hover */
+    border-radius: 3px;
+}
 
+/*Nuevo*/
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
 
-
+.section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+}
+section.main-graphic {
+    margin: 10px; /* Reduce el margen para reducir el espacio alrededor del gráfico */
+}
+  

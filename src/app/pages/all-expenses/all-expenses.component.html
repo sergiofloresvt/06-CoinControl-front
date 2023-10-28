@@ -27,10 +27,8 @@
               <div class="expense-date">
                 <p class="card-text">{{ expense.date }}</p>
               </div>
-              <div class="expense-actions">
-                <!-- Agrega el botón de eliminar aquí -->
-                <button (click)="deleteExpense(expense.id)">Eliminar</button>
-              </div>
+              <button class="delete-button" (click)="deleteExpense(expense.id)"> Eliminar
+              </button>
             </div>
           </div>
         </div>
@@ -38,3 +36,6 @@
     </div>
   </div>
 </div>
+
+
+  
