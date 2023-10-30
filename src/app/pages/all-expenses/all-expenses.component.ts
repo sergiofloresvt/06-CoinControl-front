@@ -67,7 +67,10 @@ export class AllExpensesComponent {
 
   }
 
-
+// Función para verificar si una categoría tiene gastos asociados
+categoryHasExpenses(categoryId: number): boolean {
+  return !!this.categoryExpensesMap[categoryId] && this.categoryExpensesMap[categoryId].length > 0;
+}
 
   
 
