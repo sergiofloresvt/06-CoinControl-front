@@ -5,6 +5,10 @@
     color: rgb(35, 34, 33);
     align-items: center; /* Centra el contenido verticalmente */
 }
+ul {
+    list-style: none;
+    padding: 0;
+}
 
 /* Estilo característico para los números */
 ul li {

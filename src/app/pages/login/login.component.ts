@@ -29,7 +29,7 @@ export class LoginComponent {
         console.log('Inicio de sesión exitoso:', response.message);
         const userId = response.userId
         this.authService.setUserId(userId); //Obtener id del usuario una vez logueado
-        this.router.navigate(['/add-expense'])  //redirigir una vez el usuario sea correcto
+        this.router.navigate(['/home'])  //redirigir una vez el usuario sea correcto
         console.log('Id usuario:', userId)
 
       },

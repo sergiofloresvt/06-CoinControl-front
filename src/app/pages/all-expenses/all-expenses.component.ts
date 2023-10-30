@@ -16,7 +16,8 @@ export class AllExpensesComponent {
   expandedCategories: { [key: number]: boolean } = {};
   categories: Category[] = [];
   chartPie?:Chart
-  constructor(private expenseService: ExpenseService,
+  constructor(
+    private expenseService: ExpenseService,
     private authService: AuthService
   ) { }
 
@@ -67,6 +68,7 @@ export class AllExpensesComponent {
 
   }
 
+  
 
 
   

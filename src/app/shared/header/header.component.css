@@ -4,6 +4,7 @@ header .container img {
     height: auto; /* La altura se ajustará automáticamente para mantener la proporción original */
     margin: 0 auto; /* Centrar la imagen horizontalmente dentro del contenedor */
     display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-top: -20px;
 }
 
 header{

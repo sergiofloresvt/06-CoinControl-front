@@ -11,6 +11,7 @@ body {
   background-color: #031f33;
   color: #ffffff;
   font-family: Arial, sans-serif;
+  margin-top: -160px;
 }
 
 /* Estilos para el formulario de inicio de sesión */

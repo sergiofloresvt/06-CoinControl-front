@@ -1,4 +1,10 @@
-<main>
+<!--Manejo de medidas para mobile
+  por medio del matches reviso si estoy dentro de los 600px
+  que tiene asignado la variable mobileQuery y le vamos a dar un 
+  margin top de 56 px o 0 -->
+<main class=""
+      [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
+      >
  <header> 
     <app-header></app-header>
  </header> 

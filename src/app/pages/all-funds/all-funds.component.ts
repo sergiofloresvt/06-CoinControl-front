@@ -20,7 +20,6 @@ export class AllFundsComponent implements OnInit {
   }
 
 
-
   getFundsById(){
 
     const userId= this.authService.getUserIdFromLocalStorage();

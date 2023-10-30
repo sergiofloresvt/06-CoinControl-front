@@ -27,7 +27,7 @@ export class ExpenseService {
   getExpensesByUserAndCategory(userId: number, categoryId: number): Observable<Expense[]> {
     return this.http.get<Expense[]>(`${this.baseUrl}/expense/find/user/${userId}/category/${categoryId}`);
   }
-
+    
   //Traer categorias
   getCategorys(): Observable<Category[]> {
     return this.http.get<Category[]>(`${this.baseUrl}/category/all`);
@@ -42,4 +42,5 @@ export class ExpenseService {
   getAllExpenses(): Observable<Expense[]> {
     return this.http.get<Expense[]>(`${this.baseUrl}/expense/all`);
   }
+
 }
