@@ -6,7 +6,10 @@
         <ng-container *ngIf="categoryHasExpenses(category.id)">
           <tr>
             <td colspan="2">
-              <button (click)="toggleCategory(category.id)" class="category-name">{{ category.name }}</button>
+              <!-- Muestra el gasto tatal de la categoria especifica y si no hay ningun gasto registrado para esa categoria es decir categoryTotalExpenses[category.name] 
+                es nulo o indefinido, se mostrara "0" como valor por defecto -->
+              <button (click)="toggleCategory(category.id)" class="category-name">{{ category.name }} ${{
+                categoryTotalExpenses[category.name] || 0 }}</button>
             </td>
           </tr>
           <tr *ngIf="expandedCategories[category.id]">
