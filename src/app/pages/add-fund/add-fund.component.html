@@ -1,1 +1,19 @@
-<p>add-fund works!</p>
+<div class="container">
+    <h1>Agrega un fondo nuevo</h1>
+    <form (submit)="submitForm()">
+        <div class="form-group">
+            <label for="monto">Monto:</label>
+            <input type="number" id="monto" [(ngModel)]="funds.amount" name="amount" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="funds">Seleccionar categoría:</label>
+            <select [(ngModel)]="selectPredefinedFund" name="PredefinedFundId" class="form-control">
+                <option *ngFor="let PredefinedFund of predefinedFundList" [value]="PredefinedFund.id">
+                    {{PredefinedFund.name}}
+                </option>
+            </select>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Agregar fondo</button>
+    </form>
+</div>
