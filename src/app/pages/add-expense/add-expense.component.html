@@ -1,3 +1,42 @@
+<!-- <div class="container">
+  <h2>Agregar Gasto</h2>
+  <form (submit)="submitForm()">
+    <div class="form-group">
+      <label for="monto">Monto:</label>
+      <input type="number" id="monto" [(ngModel)]="expense.amount" name="amount" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Descripción:</label>
+      <input type="text" id="description" [(ngModel)]="expense.description" name="description" class="form-control"
+        required>
+    </div>
+    <div class="form-group">
+      <label for="date">Fecha:</label>
+      <input type="date" id="date" [(ngModel)]="expense.date" name="date" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="category">Categoría:</label>
+      <select id="category" [(ngModel)]="selectedCategoryId" name="category" class="form-control" required>
+        <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="funds">Seleccionar Fondo:</label>
+      <select [(ngModel)]="selectedFundsId" name="fundsId" class="form-control" (change)="onFundsChange()">
+        <option *ngFor="let fund of fundsList" [value]="fund.id">
+          {{ fund.predefinedFund.name }}
+        </option>
+      </select>
+    </div>
+
+
+    <br>
+    <button type="submit" class="btn btn-primary">Agregar Gasto</button>
+  </form>
+  <br>
+  <a routerLink="/all-expenses">Allexpenses</a>
+</div> -->
+<!--NUEVO-->
 <div class="container">
   <h2>Agregar Gasto</h2>
   <form (submit)="submitForm()">
