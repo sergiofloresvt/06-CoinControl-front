@@ -49,4 +49,25 @@
 section.main-graphic {
     margin: 10px; /* Reduce el margen para reducir el espacio alrededor del gráfico */
 }
+
+/* Boton flotante para añadir nuevo gasto */
+.bi-plus-lg{
+    position: fixed; 
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #24405596;
+    color: #000000;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+}
   
+.bi-plus-lg:hover{
+    text-decoration: none;
+    color: #000000;
+    background: #86ff2e;
+}

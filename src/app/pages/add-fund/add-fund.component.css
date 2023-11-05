@@ -1,0 +1,45 @@
+/* Estilos del contenedor general */
+.container {
+    background-color: #031f33; /* Color de fondo del contenedor */
+    color: #fff; /* Color del texto dentro del contenedor */
+    padding: 20px; /* Espaciado interno del contenedor */
+}
+
+/* Estilos del título */
+h1 {
+    color: #fff; /* Color del título */
+    text-align: center;
+}
+
+/* Estilos para etiquetas de los campos del formulario */
+.form-group label {
+    color: #fff; /* Color del texto de las etiquetas */
+}
+
+/* Estilos para campos de entrada */
+.form-control {
+    background-color: #ffffff; /* Color de fondo de los campos de entrada */
+    color: #000; /* Color del texto dentro de los campos de entrada */
+}
+
+/* Estilos para el campo de selección */
+select.form-control {
+    background-color: #ffffff; /* Color de fondo del campo de selección */
+    color: #000; /* Color del texto dentro del campo de selección */
+}
+
+/* Estilos para el botón de enviar */
+button.btn-primary {
+    background-color: #86ff2e; /* Color de fondo del botón */
+    color: #000; /* Color del texto del botón */
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #86ff2e; /* Color de los enlaces */
+}
+
+/* Estilos al pasar el mouse por encima de los enlaces */
+a:hover {
+    color: #fff; /* Cambia el color de los enlaces al pasar el mouse */
+}

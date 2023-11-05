@@ -20,7 +20,7 @@ export class ExpenseService {
     // Agrega fundsId como un parámetro en la URL
     return this.http.post<Expense>(`${this.baseUrl}/expense/add?fundsId=${fundsId}`, expense);
   }
-  
+
 
 
   // Método para obtener los gastos de un usuario y una categoría específicos
@@ -43,4 +43,8 @@ export class ExpenseService {
     return this.http.get<Expense[]>(`${this.baseUrl}/expense/all`);
   }
 
+  // Metodo para traer el total de la categoria
+  getSumOfExpensesByCategory(userId: number): Observable<Map<string, number>> {
+    return this.http.get<Map<string, number>>(`${this.baseUrl}/expense/sum-by-category?userID=${userId}`);
+  }
 }

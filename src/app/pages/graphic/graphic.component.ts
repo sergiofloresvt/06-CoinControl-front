@@ -28,7 +28,11 @@ export class GraphicComponent implements OnInit {
   constructor ( 
     private expenseService:ExpenseService,
     private authService: AuthService,
+<<<<<<< HEAD
     // private graphicService: GraphicService
+=======
+   private graphicService: GraphicService
+>>>>>>> Fiama5/main
     
     ){}
 
