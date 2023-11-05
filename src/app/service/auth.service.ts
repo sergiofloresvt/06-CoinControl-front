@@ -26,5 +26,11 @@ export class AuthService {
     const userId = localStorage.getItem('userId');
     return userId ? parseInt(userId, 10) : null;
   }
+
+    // Función para cerrar la sesión
+    logout() {
+      // Elimina el ID del usuario almacenado en el almacenamiento local
+      localStorage.removeItem('userId');
+    }
   
 }

@@ -17,13 +17,7 @@ export class AllExpensesComponent {
   categoryTotalExpenses: { [key: string]: number } = {}; //Variable para traer el total de la categoria
   expandedCategories: { [key: number]: boolean } = {};
   categories: Category[] = [];
-<<<<<<< HEAD
-  chartPie?:Chart
-  constructor(
-    private expenseService: ExpenseService,
-=======
   constructor(private expenseService: ExpenseService,
->>>>>>> Fiama5/main
     private authService: AuthService
   ) { }
 
@@ -90,14 +84,10 @@ export class AllExpensesComponent {
 
   }
 
-<<<<<<< HEAD
-  
-=======
   // Función para verificar si una categoría tiene gastos asociados
   categoryHasExpenses(categoryId: number): boolean {
     return !!this.categoryExpensesMap[categoryId] && this.categoryExpensesMap[categoryId].length > 0;
   }
->>>>>>> Fiama5/main
 
 
   //Metodo para traer el total de la categoria

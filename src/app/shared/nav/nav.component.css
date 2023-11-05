@@ -1,4 +1,4 @@
-/* Estilo para el botón de la barra de navegación */
+
 .navbar-toggler-icon {
     background-color: #ffffff; /* Color del icono del botón */
 }
@@ -45,3 +45,4 @@
 .nav-item:active {
     background-color: #ffffff; /* Color de fondo al hacer clic */
 }
+

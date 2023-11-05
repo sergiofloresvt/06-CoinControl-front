@@ -3,6 +3,9 @@
     color: #fff; /* Cambia el color del texto según tus preferencias */
     text-align: center;
     padding: 20px 0; /* Ajusta el espaciado superior e inferior según tus preferencias */
+    margin-left: 18%;
+    margin-right: 18%;
+ 
 }
 
 .nav {
@@ -10,6 +13,7 @@
     display: flex; /* Utiliza flexbox para alinear los elementos en una fila */
     justify-content: center; /* Distribuye los elementos con espacio entre ellos */
     padding: 0; /* Elimina el relleno de la lista */
+  
 }
 
 .nav-item {
@@ -41,10 +45,13 @@
 }
 
 .section {
-    margin: 20px;
+    margin-left: 18%;
+    margin-right: 18%;
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #f5f5f5;
+    margin-top: 2%;
+    border-radius: 3px;
 }
 section.main-graphic {
     margin: 10px; /* Reduce el margen para reducir el espacio alrededor del gráfico */
@@ -64,6 +71,7 @@ section.main-graphic {
     text-align: center;
     font-size: 30px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    margin-right: 10%;
 }
   
 .bi-plus-lg:hover{

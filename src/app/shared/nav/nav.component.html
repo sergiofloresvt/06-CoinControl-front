@@ -11,7 +11,7 @@
           <a class="nav-link" [routerLink]="['/login']">Inicio Sesion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/inicio">Cierre Sesion</a>
+          <a class="nav-link" (click)="logout()">Cierre Sesion</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/home">Home</a>
@@ -47,3 +47,5 @@
     </div>
   </div>
 </nav>
+
+
